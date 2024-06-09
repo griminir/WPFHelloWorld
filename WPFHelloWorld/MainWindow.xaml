@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPFHelloWorld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFHelloWorld"
+        mc:Ignorable="d" FontSize="18"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Right">
+            <Label>First Name:</Label>
+            <Label>Last Name:</Label>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+            <TextBox Margin="0 5" x:Name="FirstNameText"></TextBox>
+            <TextBox x:Name="LastNameText"></TextBox>
+            <Button x:Name="HelloWorld" Margin="0 10" Padding="20 10" Click="HelloWorld_Click">hello world</Button>
+        </StackPanel>
+        <TextBlock x:Name="DisplayMessage" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
+
+    </Grid>
+</Window>
